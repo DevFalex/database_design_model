@@ -3,14 +3,14 @@ DESIGN OF A DATABASE MODEL FOR AIRLINE TICKET BOOKING SYSTEM
 
 The Airline Ticket Booking System facilitates the seamless booking and management of airline tickets for passengers. The system ensures efficient flight scheduling, passenger booking, ticket issuance, and real-time flight management while maintaining a smooth customer experience.
 
-*Key Stakeholders:*
-•	Passengers: This are individuals who book and travel on flights.
+# *Key Stakeholders:*
+•	Passengers: These are individuals who book and travel on flights.
 •	Airline Staff: The pilots, cabin crew, ground staff, and customer service representatives.
 •	Aircraft Management Team: Oversees fleet maintenance and scheduling.
 •	Ticketing and Booking System: Manages reservations, payments, and ticket issuance.
 •	Airport Authorities: Handle check-in, security, and boarding processes.
 
-Main Activities and Workflows:
+# Main Activities and Workflows:
 1. Flight Scheduling and Planning
 •	Airlines create flight schedules based on demand, routes, and aircraft availability.
 •	Flight details include departure/arrival times, flight numbers, aircraft type, and assigned crew.
@@ -34,7 +34,7 @@ Main Activities and Workflows:
 •	Baggage claim and customs processing.
 •	Aircraft maintenance and preparation for the next flight.
 
-2. Conceptual Model (ER)
+# 2.Conceptual Model (ER Model)
  
 Entities and Attributes:
 •	Passenger (PassengerID, Name, Email, Phone, Address)
@@ -51,7 +51,7 @@ Relationships
 •	One flight can have many tickets booked, but each ticket is for one specific flight.
 •	One aircraft has multiple crew members assigned, but each crew member works on one aircraft per entry.
 
-3. Logical Model
+# 3. Logical Model
    
 The logical model involves structuring these entities into tables, specifying attributes, primary keys (PK), and foreign keys (FK).
 
@@ -98,7 +98,7 @@ Airline Table
 •	Name
 •	Country
 
-4-5. Physical Model:
+# 4-5. Physical Model:
 The physical model specifies how the data is stored in the database, including data types and storage mechanisms. This will also be used as the DDL (Data Definition Language) to the create tables in the database.
 -- Creating Passenger Table
 CREATE TABLE Passenger (
@@ -159,7 +159,7 @@ CREATE TABLE Crew (
     FOREIGN KEY (FlightID) REFERENCES Flight(FlightID) ON DELETE CASCADE
 );
 
-6. The Data Manipulation Language (DML): This showcases the way data is being inserted into the tables.
+# 6. The Data Manipulation Language (DML): This showcases the way data is being inserted into the tables.
    
 -- Insert into Airline
 INSERT INTO Airline (Name, Country) VALUES ('Air Nigeria', 'Nigeria'), ('Ethiopian Airlines', 'Ethiopia');
@@ -177,7 +177,7 @@ INSERT INTO Ticket (PassengerID, FlightID, SeatNo, Price) VALUES (1, 1, '12A', 5
 INSERT INTO Crew (Name, Role, FlightID) VALUES ('James Smith', 'Pilot', 1), ('Sarah Johnson', 'Flight Attendant', 2);
 
 
-7. Querying the Database and showing its outputs:
+# 7. Querying the Database and showing its outputs:
 Query 1: Query the DB to get the Passengers Flight Details
 SELECT p.Name,f.Departure, f.Destination, f.Time, f.Date, t.SeatNo
 FROM Passenger p
