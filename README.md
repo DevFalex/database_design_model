@@ -1,5 +1,5 @@
-# database_design_model
-DESIGN OF A DATABASE MODEL FOR AIRLINE TICKET BOOKING SYSTEM
+
+# DESIGN OF A DATABASE MODEL FOR AIRLINE TICKET BOOKING SYSTEM
 
 The Airline Ticket Booking System facilitates the seamless booking and management of airline tickets for passengers. The system ensures efficient flight scheduling, passenger booking, ticket issuance, and real-time flight management while maintaining a smooth customer experience.
 
